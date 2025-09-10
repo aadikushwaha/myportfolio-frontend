@@ -11,21 +11,20 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-    let params = {
-      "name": name,
-      "email": email,
-      "subject": subject,
-      "message": message
-    }
-   
-      console.log(params);
+      let params = {
+        "name": name,
+        "email": email,
+        "subject": subject,
+        "message": message
+      }
+
       const response = await axios.post(`https://myportfolio-88yo.onrender.com/`, params, {
         headers: {
           'Content-Type': 'application/json'
         }
       })
       // .then((response) => {
-        console.log(response.data)
+      console.log(response.data)
       //   alert(response.data.message);
       //   setname("")
       //   setemail("")
@@ -33,7 +32,7 @@ const Contact = () => {
       //   setmessage("")
       //   })
       alert(response.data.message)
-  console.log(response)
+      console.log(response)
       setname("")
       setemail("")
       setsubject("")
@@ -41,11 +40,11 @@ const Contact = () => {
     }
     catch (error) {
       if (error.response.data.currentStatus === false) {
-        
+
         alert(error.response.data.msg);
         console.log(error.response);
-       
-        
+
+
       } else {
         alert('An error occurred. Please try again.');
       }
@@ -68,29 +67,29 @@ const Contact = () => {
           <div className="row gy-4">
 
             <div className="col-lg-5">
-<div className="info-wrap d-flex flex-col gap-5">
-  <div className="info-item d-flex align-items-center " data-aos="fade-up" data-aos-delay="200">
-    <i className="bi bi-geo-alt flex-shrink-0 me-3" style={{ fontSize: '1.5rem' }}></i>
-    <div className="items-center ">
-      <h3>Address</h3>
-      <p>Radisson Square, Indore, India</p>
-    </div>
-  </div>
-  <div className="info-item  d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
-    <i className="bi bi-telephone flex-shrink-0 me-3" style={{ fontSize: '1.5rem' }}></i>
-    <div className="items-center  p-5">
-      <h3>Call Us</h3>
-      <p>+91 8103489477</p>
-    </div>
-  </div >
-  <div className="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
-    <i className="bi bi-envelope flex-shrink-0 me-3" style={{ fontSize: '1.5rem' }}></i>
-    <div className="items-center">
-      <h3>Email Us</h3>
-      <p>adityakushwaha9477@gmail.com</p>
-    </div>
-  </div>
-  
+              <div className="info-wrap d-flex flex-col gap-5">
+                <div className="info-item d-flex align-items-center " data-aos="fade-up" data-aos-delay="200">
+                  <i className="bi bi-geo-alt flex-shrink-0 me-3" style={{ fontSize: '1.5rem' }}></i>
+                  <div className="items-center ">
+                    <h3>Address</h3>
+                    <p>Radisson Square, Indore, India</p>
+                  </div>
+                </div>
+                <div className="info-item  d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+                  <i className="bi bi-telephone flex-shrink-0 me-3" style={{ fontSize: '1.5rem' }}></i>
+                  <div className="items-center  p-5">
+                    <h3>Call Us</h3>
+                    <p>+91 8103489477</p>
+                  </div>
+                </div >
+                <div className="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+                  <i className="bi bi-envelope flex-shrink-0 me-3" style={{ fontSize: '1.5rem' }}></i>
+                  <div className="items-center">
+                    <h3>Email Us</h3>
+                    <p>adityakushwaha9477@gmail.com</p>
+                  </div>
+                </div>
+
               </div>      </div>
 
             <div className="col-lg-7">
