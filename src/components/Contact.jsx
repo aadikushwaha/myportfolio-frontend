@@ -30,7 +30,7 @@ const Contact = () => {
       //   setsubject("")
       //   setmessage("")
       //   })
-      alert(response.data.message)
+      alert(response?.data?.message)
       console.log(response)
       setname("")
       setemail("")
