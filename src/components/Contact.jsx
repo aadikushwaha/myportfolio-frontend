@@ -24,7 +24,6 @@ const Contact = () => {
         }
       })
       // .then((response) => {
-      console.log(response.data)
       //   alert(response.data.message);
       //   setname("")
       //   setemail("")
@@ -136,5 +135,6 @@ const Contact = () => {
   )
 };
 export default Contact;
+
 
 
