@@ -18,7 +18,7 @@ const Contact = () => {
         "message": message
       }
 
-      const response = await axios.post(`https://myportfolio-88yo.onrender.com/`, params, {
+      const response = await axios.post(`https://myportfolio-backend-9cy7.onrender.com/`, params, {
         headers: {
           'Content-Type': 'application/json'
         }
